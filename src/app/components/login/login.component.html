@@ -1,0 +1,6 @@
+<div class="wrap w-100 d-flex justify-content-center align-items-center">
+          <div class="form-group w-25 d-flex">
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter username" [(ngModel)]="userName">
+            <button class="ml-2 btn btn-primary fetch-btn" [disabled]="userName.length === 0" (click)="fetchUser()" >Fetch</button>
+          </div>
+</div>
