@@ -12,4 +12,10 @@ export class ApiService {
   getUserDetails(userName): Observable<any>{
     return this.http.get(`https://api.github.com/users/${userName}`, {});
   }
+  getRepositories(userName): Observable <any>{
+    return this.http.get(`https://api.github.com/users/${userName}/repos`, {});
+  }
+  getStaredRepos(userName) : Observable <any>{
+    return this.http.get(`https://api.github.com/users/${userName}/starred`, {});
+  }
 }

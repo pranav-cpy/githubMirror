@@ -1,12 +1,40 @@
 <app-header></app-header>
-<div class="w-100">
-    
+<div class="w-100 row pt-5 wrap">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-9 d-flex nav-section">
+        <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 0}" (click)="selectedTab = 0">
+            <p class="m-0 pb-3 mx-4" >
+            <img class="nav-img mr-1" src="/assets/overview.png" alt="">
+                Overview</p>
+        </div>
+        <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 1}" (click)="selectedTab = 1">
+            
+            <p class="m-0 pb-3 mx-4" >
+                <img class="nav-img mr-1" src="/assets/repo.png" alt="">Repositories</p>
+        </div>
+        <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 2}" (click)="selectedTab = 2">
+            
+            <p class="m-0 pb-3 mx-4" >
+                <img class="nav-img mr-1" src="/assets/project.png" alt="">Projects</p>
+        </div>
+        <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 3}" (click)="selectedTab = 3">
+           
+            <p class="m-0 pb-3 mx-4" >
+                <img class="nav-img mr-1" src="/assets/packages.png" alt="">Packages</p>
+        </div>
+    </div>
+    <hr>
 </div>
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-3 m-0">
         <app-user-profile></app-user-profile>
     </div>
-    <div class="col-md-9">
-        <app-contibutions></app-contibutions>
+    <div class="col-md-9 m-0">
+        <app-contibutions *ngIf="selectedTab === 0"></app-contibutions>
+        <p *ngIf="selectedTab === 1">Repositories Tab</p>
+        <p *ngIf="selectedTab === 2">Projects Tab</p>
+        <p *ngIf="selectedTab === 3">Packages Tab</p>
     </div>
 </div>

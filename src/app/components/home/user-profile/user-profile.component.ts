@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
-
+currentUser=null;
   constructor() { }
 
   ngOnInit(): void {
+    this.currentUser  = JSON.parse(sessionStorage.getItem('currentUser'));
   }
 
 }

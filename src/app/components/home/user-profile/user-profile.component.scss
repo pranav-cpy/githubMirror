@@ -1,0 +1,38 @@
+.user-profile-wrap{
+    .profile-img{
+        border-radius: 50%;
+        width: 99%;
+        margin-top: -55px;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .login{
+        font-size: 16px;
+    }
+    .button-div{
+        
+        .follow-btn{
+            width: 80%;
+            background-color: #fafafc;
+            color: #000000;
+            outline: #d9dadc;
+            border:solid 1px  #d9dadc ;
+        }
+        .ellipsis-btn{
+            width: 20%;
+            background-color: #fafafc;
+            color: #d9dadc;
+            border:solid 1px  #d9dadc ;
+        }
+    }
+    .stats-section{
+        .follow-div{
+            font-size: 14px;
+            align-items: center;
+        }
+    }
+    .sub-details{
+        font-size: 14px;
+    }
+}

@@ -1,1 +1,10 @@
-<p>contibutions works!</p>
+<p class="mb-0">Popular repositories</p>
+<div class="row wrap mr-2">
+    <div class="col-md-6 repo-column" *ngFor= "let repo of repositoryData">
+        <div class="repository-wrap p-3 border repo-name mt-3">
+            <a class="font-weight-bold reponame">{{repo.name}}</a>
+
+            <p class="description">{{repo.description}}</p>
+        </div>
+    </div>
+</div>

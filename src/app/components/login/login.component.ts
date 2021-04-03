@@ -16,7 +16,9 @@ export class LoginComponent implements OnInit {
   fetchUser(){
     this.apiService.getUserDetails(this.userName).subscribe(data=> {
       if(data){
-          this.router.navigate(['home'])
+          sessionStorage.setItem('currentUser',JSON.stringify(data));
+          console.log(data.avatar_url)
+          this.router.navigate(['home']);
       }
     }
      )

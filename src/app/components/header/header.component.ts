@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  currentUser=null;
   constructor() { }
 
   ngOnInit(): void {
+    this.currentUser  = JSON.parse(sessionStorage.getItem('currentUser'));
+   
   }
 
 }

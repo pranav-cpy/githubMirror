@@ -1,1 +1,38 @@
-<p>user-profile works!</p>
+<div class="user-profile-wrap flex-column px-4">
+    <div class="d-flex justify-content-center w-100">
+        <img [src]="currentUser.avatar_url" alt="profile img" class="profile-img">
+    </div>
+    
+    <p class="name font-weight-bold mt-3 mb-0">{{currentUser.name}}</p>
+    <p class="login text-secondary mb-2">{{currentUser.login}}</p>
+    <div class="button-div d-flex mb-2">
+        <button class="btn  mr-1 follow-btn">Follow</button>
+        <button class="btn  mr-1 ellipsis-btn"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+    </div>
+    <p class="bio-text">
+        {{currentUser.bio}}
+    </p>
+    <div class="stats-section mb-3">
+        <span class="follow-div d-flex">
+            <i class="fa fa-user-o mr-1" aria-hidden="true"></i>
+            <b class="mr-1">{{currentUser.followers}}</b> followers . <b class="mr-1">{{currentUser.following}}</b> following .
+            <i class="fa fa-star-o mr-1" aria-hidden="true"></i>
+            <b>{{currentUser.starCount}}</b>
+        </span>
+    </div>
+    <div class="sub-details d-flex align-items-center mb-1" *ngIf="currentUser.location !== null">
+        <i class="fa fa-map-marker mr-1" aria-hidden="true"></i>
+        <p class="m-0">{{currentUser.location}}</p>
+    </div>
+    <div class="sub-details d-flex align-items-center mb-1">
+        <i class="fa fa-envelope-o mr-1" aria-hidden="true"></i>
+        <p class="m-0">{{currentUser.email?currentUser.email:'Sign in to view email'}}</p>
+    </div>
+
+    <div class="sub-details d-flex align-items-center mb-1" *ngIf="currentUser.blog !== null && currentUser.blog.length !==0 ">
+        <i class="fa fa-link mr-1" aria-hidden="true"></i>
+        <p class="m-0">{{currentUser.blog}}</p>
+    </div>
+    
+</div>
+

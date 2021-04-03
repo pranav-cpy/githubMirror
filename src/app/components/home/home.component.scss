@@ -1,0 +1,21 @@
+.wrap{
+    .nav-section{
+        font-size: 14px;
+        .nav-item{
+            .nav-img{
+                width: 20px;
+            }
+            &:hover{
+                border-bottom: solid 3px grey;
+            }
+        }
+        .selected-nav{
+            border-bottom: solid 4px red !important;
+        }
+       
+    }
+    hr{
+        width: 100%;
+        margin-top: 0px;
+    }
+}
