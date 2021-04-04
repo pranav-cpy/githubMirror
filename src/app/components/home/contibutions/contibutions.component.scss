@@ -2,17 +2,55 @@
     .repo-column{
         .repository-wrap{
             border-radius: 4px;
-            height: 150px;
-            .nreponame{
+            height: 140px;
+            .reponame{
                 font-size: 15px;
             }
             .description{
                 font-size: 13px;
                 display: -webkit-box;
-                -webkit-line-clamp: 3;
+                -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;  
                 overflow: hidden;
+                height: 37px;
             }
+            .description-lang{
+                font-size: 13px;
+            }
+            .forked-div{
+                font-size: 10px;
+            }
+            .bullet{
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: grey;
+            }
+            .Jupyter{
+                background-color: #DA5B0B
+            }
+            .Dart{
+                background-color: #00B4AB;
+            }
+            .JavaScript{
+                background-color: #f1e05a;
+            }
+            .TypeScript{
+                background-color: #2b7489;
+            }
+            .Python{
+                background-color: #3572A5;
+            }
+            .HTML{
+                background-color: #e34c26;
+            }
+        }
+    }
+}
+.contributions-section{
+    .graph-section{
+        .graph-wrap{
+            border-radius: 4px;
         }
     }
 }

@@ -9,6 +9,7 @@ import { UserProfileComponent } from './components/home/user-profile/user-profil
 import { ContibutionsComponent } from './components/home/contibutions/contibutions.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     UserProfileComponent,
     ContibutionsComponent,
     HomeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

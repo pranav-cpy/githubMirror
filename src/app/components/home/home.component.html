@@ -1,28 +1,34 @@
 <app-header></app-header>
-<div class="w-100 row pt-5 wrap">
+<div class="w-100 row mt-3 pt-2 wrap">
     <div class="col-md-3">
 
     </div>
     <div class="col-md-9 d-flex nav-section">
         <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 0}" (click)="selectedTab = 0">
             <p class="m-0 pb-3 mx-4" >
-            <img class="nav-img mr-1" src="/assets/overview.png" alt="">
+            <img class="nav-img mr-1" src="/assets/overview.png" alt="" *ngIf="selectedTab === 0">
+            <img class="nav-img mr-1" src="/assets/overview-g.png" alt="" *ngIf="selectedTab !== 0">
                 Overview</p>
         </div>
         <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 1}" (click)="selectedTab = 1">
             
             <p class="m-0 pb-3 mx-4" >
-                <img class="nav-img mr-1" src="/assets/repo.png" alt="">Repositories</p>
+                <img class="nav-img mr-1" src="/assets/repo.png" alt="" *ngIf="selectedTab === 1">
+                <img class="nav-img mr-1" src="/assets/repo-g.png" alt="" *ngIf="selectedTab !== 1">Repositories
+                <span class="repocount-wrap">{{repoCount}}</span>
+            </p>
         </div>
         <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 2}" (click)="selectedTab = 2">
             
             <p class="m-0 pb-3 mx-4" >
-                <img class="nav-img mr-1" src="/assets/project.png" alt="">Projects</p>
+                <img class="nav-img mr-1" src="/assets/project.png" alt="" *ngIf="selectedTab === 2">
+                <img class="nav-img mr-1" src="/assets/project-g.png" alt="" *ngIf="selectedTab !== 2">Projects</p>
         </div>
         <div class="nav-item" [ngClass]="{'selected-nav font-weight-bold': selectedTab === 3}" (click)="selectedTab = 3">
            
             <p class="m-0 pb-3 mx-4" >
-                <img class="nav-img mr-1" src="/assets/packages.png" alt="">Packages</p>
+                <img class="nav-img mr-1" src="/assets/packages.png" alt="" *ngIf="selectedTab === 3">
+                <img class="nav-img mr-1" src="/assets/packages-g.png" alt="" *ngIf="selectedTab !== 3">Packages</p>
         </div>
     </div>
     <hr>
@@ -38,3 +44,4 @@
         <p *ngIf="selectedTab === 3">Packages Tab</p>
     </div>
 </div>
+<app-footer></app-footer>

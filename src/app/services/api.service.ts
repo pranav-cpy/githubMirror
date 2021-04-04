@@ -18,4 +18,10 @@ export class ApiService {
   getStaredRepos(userName) : Observable <any>{
     return this.http.get(`https://api.github.com/users/${userName}/starred`, {});
   }
+  getContributions(userName): Observable <any>{
+    return this.http.get(`https://api.github.com/users/${userName}/events`, {});
+  }
+  getRepoLanguages(userName,repoName): Observable<any>{
+    return this.http.get(`https://api.github.com/repos/${userName}/${repoName}/languages`)
+  }
 }

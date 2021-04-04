@@ -2,9 +2,29 @@
 <div class="row wrap mr-2">
     <div class="col-md-6 repo-column" *ngFor= "let repo of repositoryData">
         <div class="repository-wrap p-3 border repo-name mt-3">
-            <a class="font-weight-bold reponame">{{repo.name}}</a>
+            <a class="font-weight-bold reponame mb-1">{{repo.name}}</a>
+            <div class="w-100 forked-div">
+                <p class="mb-2 " *ngIf="repo.fork">Forked from</p>
+            </div>
+            
 
-            <p class="description">{{repo.description}}</p>
+            <p class="description mb-2">{{repo.description}}</p>
+
+            <div class="d-flex align-items-center" *ngIf="repo.repoLanguage">
+                <div class="bullet mr-1 {{ repo.repoLanguage.split(' ')[0]}}"></div><p class="description-lang m-0"> {{repo.repoLanguage}}</p>
+            </div>
         </div>
+    </div>
+</div>
+
+<div class="contributions-section row">
+    <div class="col-md-10 graph-section">
+        <p class="mt-3">{{contributionData.length}} Contributions to public repos in last Year</p>
+        <div class="border p-3 graph-wrap">
+        <img class="w-100" src="https://ghchart.rshah.org/{{currentUser.login}}" alt="Github chart" />
+        </div>
+    </div>
+    <div class="col-md-2 d-flex flex-column pt-4">
+        <button *ngFor = "let item of [].constructor(yearCount); let i = index" class="btn  w-75 mb-1" style="text-align: left;" [ngClass]="{'btn-primary': i === selectedContributionYear}" (click)="selectedContributionYear = i">{{startYear + i}}</button>
     </div>
 </div>
