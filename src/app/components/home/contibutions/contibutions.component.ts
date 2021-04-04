@@ -34,7 +34,7 @@ export class ContibutionsComponent implements OnInit {
       ],
       xgap:1,
       ygap:1,
-      
+      showscale: false
     }
     
   ];
