@@ -8,3 +8,21 @@
         outline: none;
     }
 }
+
+@media only screen and (max-width: 780px) {
+    .wrap{
+        div{
+            flex-direction: column !important;
+            width: 50% !important;
+            input{
+
+            }
+            .fetch-btn{
+                width: 100%;
+    margin-left: 0px !important;
+    margin-top: 15px
+            }
+        }
+        
+    }
+}
