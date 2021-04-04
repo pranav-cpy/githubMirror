@@ -1,11 +1,18 @@
 <div class="user-profile-wrap flex-column px-4">
-    <div class="d-flex justify-content-center w-100">
-        <img [src]="currentUser.avatar_url" alt="profile img" class="profile-img">
+    <div class="row profile-row">
+        <div class="d-flex justify-content-center w-100 col-md-12 col-3">
+            <img [src]="currentUser.avatar_url" alt="profile img" class="profile-img">
+        </div>
+        <div class="col-sm-9 col-md-12 col-9">
+            <p class="name font-weight-bold mt-3 mb-0 ">{{currentUser.name}}</p>
+            <p class="login text-secondary mb-2">{{currentUser.login}}</p>
+        </div>
+        
     </div>
     
-    <p class="name font-weight-bold mt-3 mb-0">{{currentUser.name}}</p>
-    <p class="login text-secondary mb-2">{{currentUser.login}}</p>
-    <div class="button-div d-flex mb-2">
+    
+    
+    <div class="button-div d-flex mb-2 section-1">
         <button class="btn  mr-1 follow-btn">Follow</button>
         <button class="btn  mr-1 ellipsis-btn"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
     </div>
@@ -33,6 +40,9 @@
         <i class="fa fa-link mr-1" aria-hidden="true"></i>
         <p class="m-0">{{currentUser.blog}}</p>
     </div>
-    
+    <div class="button-div d-flex mb-2 section-2">
+        <button class="btn  mr-1 follow-btn">Follow</button>
+        <button class="btn  mr-1 ellipsis-btn"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+    </div>
 </div>
 

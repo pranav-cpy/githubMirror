@@ -36,4 +36,56 @@
     .sub-details{
         font-size: 14px;
     }
+    .section-2{
+        display: none !important;
+    }
 }
+
+
+@media only screen and (max-width: 600px) {
+    .user-profile-wrap{
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        .profile-row{
+            margin-left: 0px;
+        }
+        .profile-img{
+            border-radius: 50%;
+            width: 75px;
+            height: 75px;
+            z-index: 2;
+            margin-top: 0px;
+        }
+        .button-div{
+            margin-top: 20px;
+            .follow-btn{
+                width: 80%;
+                background-color: #fafafc;
+                color: #000000;
+                outline: #d9dadc;
+                border:solid 1px  #d9dadc ;
+            }
+            .ellipsis-btn{
+                width: 20%;
+                background-color: #fafafc;
+                color: #d9dadc;
+                border:solid 1px  #d9dadc ;
+            }
+        }
+        .section-2{
+            display: unset;
+        }
+        .section-1{
+            display: none !important;
+        }
+        .stats-section{
+            .follow-div{
+                font-size: 14px;
+                align-items: center;
+            }
+        }
+        .sub-details{
+            font-size: 14px;
+        }
+    }
+  }

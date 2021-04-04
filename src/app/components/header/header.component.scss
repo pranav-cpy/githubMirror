@@ -14,10 +14,40 @@
         img{
             width: 40px;
         }
+        .hamburger-icon{
+            display: none;
+        }
+    }
+    .right{
+        i{
+            font-size: 15px;
+        }
     }
 }
 .profile-drop-img{
     width: 20px;
     height: 20px;
     border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-wrap{
+        .left{
+            width: 58%!important;
+            input,p{
+                display: none !important;
+            }
+            .hamburger-icon{
+                display: unset !important;
+                font-size: 25px;
+                margin-left: 8px;
+                color: white;
+            }
+        }
+        .right{
+            .dropdown{
+                display: none !important;
+            }
+        }
+    }
 }
